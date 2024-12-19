@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axolotl: The Mexican Walking Fish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.classList.add('transition-opacity');
+                img.classList.add('duration-1000');
+                img.classList.add('ease-in');
+            });
+
+            // Кнопка для скрытия/показа фактов
+            const factsButton = document.getElementById('toggle-facts');
+            const factsSection = document.getElementById('facts-section');
+            factsButton.addEventListener('click', () => {
+                factsSection.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
+            background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png'); /* Узоры для фона */
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <header class="text-center py-10 bg-slate-900 shadow-lg rounded-lg mb-10 border-4 border-transparent hover:border-orange-500 transition-all duration-500">
+        <h1 class="text-5xl font-bold text-white">The Axolotl: The Mexican Walking Fish</h1>
+        <p class="text-lg text-gray-300 mt-2">Learn more about this fascinating creature and its unique abilities!</p>
+    </header>
+
+    <div class="max-w-4xl mx-auto p-8 bg-gray-900 rounded-lg shadow-xl border-2 border-gray-700">
+        <!-- Введение -->
+        <section>
+            <h2 class="text-3xl font-semibold text-white">Introduction</h2>
+            <p class="text-lg mt-4 text-gray-300">
+                The Axolotl, also known as the Mexican Walking Fish, is a fascinating aquatic creature found in lakes near Mexico City. It's famous for its ability to regenerate limbs and even organs!
+            </p>
+        </section>
+
+        <!-- Факты с кнопкой для скрытия -->
+        <section class="mt-8">
+            <h2 class="text-3xl font-semibold text-white">Interesting Facts</h2>
+            <button id="toggle-facts" class="mt-4 py-2 px-4 bg-gray-800 hover:bg-gray-700 rounded-full text-lg font-semibold transition duration-300 text-white">Toggle Facts</button>
+            <ul id="facts-section" class="list-disc list-inside mt-4 text-lg hidden text-gray-300">
+                <li>Axolotls can regenerate lost body parts, including limbs, heart, and spinal cord!</li>
+                <li>They can remain in their juvenile form throughout their life—a phenomenon called neoteny.</li>
+                <li>They are critically endangered in the wild, primarily due to habitat loss and pollution.</li>
+                <li>Axolotls have a remarkable ability to regenerate their spinal cord after injury.</li>
+                <li>They can live up to 15 years in captivity if cared for properly.</li>
+                <li>Their ability to heal is being studied for potential medical applications in humans.</li>
+            </ul>
+        </section>
+
+        <!-- Фото -->
+        <section class="mt-8">
+            <h2 class="text-3xl font-semibold text-white">Photos</h2>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative overflow-hidden rounded-lg shadow-xl border-2 border-transparent hover:border-orange-500 transition-all duration-500">
+                    <img src="https://www.nhm.ac.uk/content/dam/nhmwww/discover/axolotl/axolotl-pink-captive-bred-two-column.jpg.thumb.768.768.jpg" alt="Axolotl 1" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-xl border-2 border-transparent hover:border-orange-500 transition-all duration-500">
+                    <img src="https://www.worldatlas.com/r/w1200/upload/dd/c6/15/shutterstock-427983619.jpg" alt="Axolotl 2" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-xl border-2 border-transparent hover:border-orange-500 transition-all duration-500">
+                    <img src="https://animals.sandiegozoo.org/sites/default/files/2019-09/axolotl04_0.jpg" alt="Axolotl 3" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 py-4 text-center text-sm text-gray-400 mt-10 rounded-lg shadow-lg border-2 border-transparent hover:border-orange-500 transition-all duration-500">
+        <p>Created with ❤️ by komand Milfhunters</p>
+    </footer>
+
+</body>
+</html>
